@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func showActivityView(_ sender: UIBarButtonItem) {
+        
+        func showMesseage(){print("表示完了")}
+        
         // imageView.imageは犬の画像
         let controller = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
-        self.present(controller, animated: false, completion: nil)
+        //　クロージャ
+        self.present(controller, animated: false, completion: showMesseage)
         
         
     }

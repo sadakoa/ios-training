@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-fw-or4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPw-so-5lD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="H6Q-yS-U0A">
+                                        <connections>
+                                            <action selector="launchCamera:" destination="BYZ-38-t0r" id="ZjY-hy-KtD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qfl-fw-or4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7PS-OM-AhE"/>
+                            <constraint firstItem="KPw-so-5lD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Viq-1p-hCL"/>
+                            <constraint firstItem="Qfl-fw-or4" firstAttribute="leading" secondItem="KPw-so-5lD" secondAttribute="leading" id="XAB-9x-HcN"/>
+                            <constraint firstItem="Qfl-fw-or4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cpH-ZV-1k2"/>
+                            <constraint firstItem="Qfl-fw-or4" firstAttribute="trailing" secondItem="KPw-so-5lD" secondAttribute="trailing" id="eAy-YY-Qn2"/>
+                            <constraint firstItem="Qfl-fw-or4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="etB-Mt-lgr"/>
+                            <constraint firstAttribute="trailing" secondItem="Qfl-fw-or4" secondAttribute="trailing" id="hFT-PZ-S5G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Qfl-fw-or4" id="RtB-9v-7xH"/>
+                        <outlet property="launchCamera" destination="H6Q-yS-U0A" id="FSS-Mj-an0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
