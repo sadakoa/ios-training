@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ad-a5-KLp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqq-Hg-FS8">
+                                <rect key="frame" x="307" y="608" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <segue destination="ReH-s6-bFW" kind="show" id="lPx-Mg-WkE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hqq-Hg-FS8" secondAttribute="trailing" constant="14" id="KYi-by-ihS"/>
+                            <constraint firstItem="2ad-a5-KLp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qkh-ym-m8G"/>
+                            <constraint firstItem="2ad-a5-KLp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Vgh-sz-IM5"/>
+                            <constraint firstItem="2ad-a5-KLp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tUY-py-hiz"/>
+                            <constraint firstAttribute="trailing" secondItem="2ad-a5-KLp" secondAttribute="trailing" id="uA2-Aw-mcK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hqq-Hg-FS8" secondAttribute="bottom" constant="29" id="vFE-bp-8cX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TaskTableView" destination="2ad-a5-KLp" id="Fwh-7E-nIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="203"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="GrW-GC-zpF">
+            <objects>
+                <viewController id="ReH-s6-bFW" customClass="AddTaskViewController" customModule="todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NNA-MA-lKB"/>
+                        <viewControllerLayoutGuide type="bottom" id="han-wC-5I9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FxA-DT-H8C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pin-1b-IIr">
+                                <rect key="frame" x="132" y="35" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entry New Task" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-gq-5fU">
+                                <rect key="frame" x="16" y="79" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x0-fe-6FF">
+                                <rect key="frame" x="312" y="30" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="ReH-s6-bFW" eventType="touchUpInside" id="Srd-oD-iqY"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FFv-fV-vjt">
+                                <rect key="frame" x="16" y="131" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Todo"/>
+                                    <segment title="Shopping"/>
+                                    <segment title="Asignment"/>
+                                </segments>
+                                <connections>
+                                    <action selector="categoryChosen:" destination="ReH-s6-bFW" eventType="valueChanged" id="sZz-zW-oja"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-bg-6h8">
+                                <rect key="frame" x="330" y="176" width="30" height="30"/>
+                                <state key="normal" title="Plus"/>
+                                <connections>
+                                    <action selector="plusButtonTapped:" destination="ReH-s6-bFW" eventType="touchUpInside" id="9du-gn-GGG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9x0-fe-6FF" firstAttribute="leading" secondItem="pin-1b-IIr" secondAttribute="trailing" constant="70" id="0E9-29-kFc"/>
+                            <constraint firstItem="pin-1b-IIr" firstAttribute="centerY" secondItem="9x0-fe-6FF" secondAttribute="centerY" id="0Eu-bM-14N"/>
+                            <constraint firstItem="9x0-fe-6FF" firstAttribute="top" secondItem="NNA-MA-lKB" secondAttribute="bottom" constant="10" id="0Lt-PV-A2Y"/>
+                            <constraint firstItem="hnC-bg-6h8" firstAttribute="top" secondItem="FFv-fV-vjt" secondAttribute="bottom" constant="16" id="Acz-vW-3eo"/>
+                            <constraint firstItem="3wd-gq-5fU" firstAttribute="leading" secondItem="FxA-DT-H8C" secondAttribute="leadingMargin" id="CWR-PM-Akq"/>
+                            <constraint firstItem="3wd-gq-5fU" firstAttribute="trailing" secondItem="FFv-fV-vjt" secondAttribute="trailing" id="Jz8-dw-rbI"/>
+                            <constraint firstItem="FFv-fV-vjt" firstAttribute="top" secondItem="3wd-gq-5fU" secondAttribute="bottom" constant="23" id="KAX-3d-vi1"/>
+                            <constraint firstItem="pin-1b-IIr" firstAttribute="centerX" secondItem="3wd-gq-5fU" secondAttribute="centerX" id="NvF-Mp-gvQ"/>
+                            <constraint firstItem="3wd-gq-5fU" firstAttribute="leading" secondItem="FFv-fV-vjt" secondAttribute="leading" id="OBa-9V-oai"/>
+                            <constraint firstItem="3wd-gq-5fU" firstAttribute="trailing" secondItem="FxA-DT-H8C" secondAttribute="trailingMargin" id="dJW-bt-qxj"/>
+                            <constraint firstItem="9x0-fe-6FF" firstAttribute="trailing" secondItem="hnC-bg-6h8" secondAttribute="trailing" id="eTJ-u8-Ndb"/>
+                            <constraint firstItem="3wd-gq-5fU" firstAttribute="top" secondItem="9x0-fe-6FF" secondAttribute="bottom" constant="19" id="zAa-Hy-txy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categorySegmentedControl" destination="FFv-fV-vjt" id="pH2-5I-39T"/>
+                        <outlet property="taskTextField" destination="3wd-gq-5fU" id="Xac-Ys-4CE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJQ-8U-Pfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="202.84857571214394"/>
+        </scene>
+    </scenes>
+</document>

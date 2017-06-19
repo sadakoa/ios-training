@@ -104,6 +104,7 @@
         <!--Table View Controller-->
         <scene sceneID="7El-VG-Ipg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNR-7D-5Oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cnD-33-Qrb" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eLZ-5b-WZM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -125,12 +126,12 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dNR-7D-5Oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="xJJ-Vq-WAM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfu-9p-wWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Q9M-Cm-xAn" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mr1-qD-Pao">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -152,7 +153,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfu-9p-wWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
